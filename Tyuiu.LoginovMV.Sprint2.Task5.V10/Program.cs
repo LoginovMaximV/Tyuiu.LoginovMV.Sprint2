@@ -35,7 +35,27 @@ namespace Tyuiu.LoginovMV.Sprint2.Task5.V10
             m = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите день:");
             n = Convert.ToInt32(Console.ReadLine());
-            string res = ds.FindDateOfPreviousDay(g, m, n);
+            string res;
+            if ((m>12)||(m<1))
+            {
+                res = "Введено неверное значение месяца";
+            }
+            else if ((n < 1) || (n > 31))
+            {
+                res = "Введено неверное значение дня";
+            }
+            else if ((n>28)&&(m==2))
+            {
+                res = "В Феврале всего 28 дней!!!";
+            }
+            else if ((n>30)&&((m==4)||(m==6)||(m==9)||(m==11)))
+            {
+                res = "В Апреле, Июне, Сентябре и Ноябре всего 30 дней!!!";
+            }
+            else
+            {
+                res = ds.FindDateOfPreviousDay(g, m, n);
+            }
             Console.WriteLine("**************************************************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                                                 *");
             Console.WriteLine("**************************************************************************************************************");
