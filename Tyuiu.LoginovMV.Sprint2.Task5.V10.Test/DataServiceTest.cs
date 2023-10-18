@@ -16,7 +16,7 @@ namespace Tyuiu.LoginovMV.Sprint2.Task5.V10.Test
             int m = 9;
             int n = 30;
             string res = ds.FindDateOfPreviousDay(g, m, n);
-            string wait = "2001.9.29";
+            string wait = "29.9.2001";
             Assert.AreEqual(wait, res);
         }
     }

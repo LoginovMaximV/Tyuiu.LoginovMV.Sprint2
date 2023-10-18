@@ -50,7 +50,7 @@ namespace Tyuiu.LoginovMV.Sprint2.Task5.V10.Lib
             string day = n.ToString();
             string month = m.ToString();
             string year = g.ToString();
-            return year + '.' + month + '.' + day;
+            return day + '.' + month + '.' + year;
         }
     }
 }
